@@ -1,3 +1,5 @@
 # CS 260 Start Up Application Project
 
-Changing the readme in Git and vsCode.
+### Lessons Learned
+___
+- I learned more about how to resolve merge conflicts. Ususally I do everything throught the CLI, which can be a pain, but using the GitLens extension on VSCode made it quite easy to resolve without completely overwriting one of the commits. 
