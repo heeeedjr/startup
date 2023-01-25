@@ -1,2 +1,1 @@
-# startup
-CS 260 Start Up Application Project
+# CS 260 Start Up Application Project
