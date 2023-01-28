@@ -5,7 +5,16 @@
 
 
 ## Start up Pitch
-- I will create an interactive blog website to track my journey with Information Technology (IT). It will provide funny misconceptions I had, common problems when first starting, personal goals for my career, and commentary on the current state of all things cyber. The blog will be a place where any beginner in IT can go to feel comfortable and understood. It will be well designed and maintained by me as an example of how far I have come. If users wish to comment on the blog posts, they must create an account. There will be some fun small features like using dad joke/funny quote APIs to pre-fill the comment section among other ideas. 
+- I will create an interactive blog website to track my journey with Information Technology (IT). It will provide funny misconceptions I had, common problems when first starting, personal goals for my career, and commentary on the current state of all things cyber. The blog will be a place where any beginner in IT can go to feel comfortable and understood. It will be well designed and maintained by me as an example of how far I have come. If users wish to comment on the blog posts, they must create an account. There will be some fun small features like using dad joke/funny quote APIs to pre-fill the comment section among other ideas.  
+
+## Key Features
+- Secure login over HTTPS
+- OAuth 2.0 with Facebook and Google
+- Ability to comment on blog posts when logged in
+- Several web pages including about the author, featured posts, all posts, etc.
+- Search bar for easy navigation
+- Comments and posts are stored in database for persistant storage
+- Admin can create, update, and delete blog posts and comments on the posts
 
 ## First Draft Design
 Here is the home page.
