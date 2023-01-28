@@ -15,6 +15,7 @@
 - Search bar for easy navigation
 - Comments and posts are stored in database for persistant storage
 - Admin can create, update, and delete blog posts and comments on the posts
+- Likes on posts and comments to be displayed in real time on the blog
 
 ## First Draft Design
 Here is the home page.
