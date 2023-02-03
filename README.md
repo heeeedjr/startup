@@ -42,3 +42,6 @@ Here is the login page using OAuth and an option for local account creation.
 ## Connecting to WebServer
 There are several ways to connect to the webserver we created, I will inlcude the command to connect over SSH. 
 - ```ssh -i cs260-webserver.pem ubuntu@password123.click```
+
+## SSL/TLS Certs
+I did not know you could have a service set up to automatically renew certs. This is something I currently do manually and need to find a way to implement this! The service being used to do this for our implementation is Caddy. It is hooked up to Let's Encrypt. Food for thought...
