@@ -37,4 +37,8 @@ Here is the end of a blog post showing off the comment section.
 ![One Blog Post with Comments Page](/images/oneBlogPost_page_comments.png)  
 
 Here is the login page using OAuth and an option for local account creation.
-![Login Page](/images/login_page.png)
+![Login Page](/images/login_page.png)  
+
+## Connecting to WebServer
+There are several ways to connect to the webserver we created, I will inlcude the command to connect over SSH. 
+- ```ssh -i cs260-webserver.pem ubuntu@password123.click```
