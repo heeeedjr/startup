@@ -2,7 +2,7 @@
 
 ## Lessons Learned
 - I learned more about how to resolve merge conflicts. Usually, I do everything through the CLI, which can be a pain, but using the GitLens extension on VSCode made it quite easy to resolve without completely overwriting one of the commits. 
-
+- I learned more about how to use SVGs in the Simon HTML assignment. Here are some of the optionsand what they do: M move <to x,y> Q quadratic curve <control point x,y> <to x,y>
 
 ## Start up Pitch
 - I will create an interactive blog website to track my journey with Information Technology (IT). It will provide funny misconceptions I had, common problems when first starting, personal goals for my career, and commentary on the current state of all things cyber. The blog will be a place where any beginner in IT can go to feel comfortable and understood. It will be well designed and maintained by me as an example of how far I have come. If users wish to comment on the blog posts, they must create an account. There will be some fun small features like using dad joke/funny quote APIs to pre-fill the comment section among other ideas.  
@@ -37,4 +37,11 @@ Here is the end of a blog post showing off the comment section.
 ![One Blog Post with Comments Page](/images/oneBlogPost_page_comments.png)  
 
 Here is the login page using OAuth and an option for local account creation.
-![Login Page](/images/login_page.png)
+![Login Page](/images/login_page.png)  
+
+## Connecting to WebServer
+There are several ways to connect to the webserver we created, I will inlcude the command to connect over SSH. 
+- ```ssh -i cs260-webserver.pem ubuntu@password123.click```
+
+## SSL/TLS Certs
+I did not know you could have a service set up to automatically renew certs. This is something I currently do manually and need to find a way to implement this! The service being used to do this for our implementation is Caddy. It is hooked up to Let's Encrypt. Food for thought...
