@@ -20,6 +20,10 @@ main {
     align-items: center;
 }
 
+#createPost {
+    display: block;
+}
+
 #about {
     display: flex;
     flex-direction: column;

@@ -53,7 +53,18 @@
             </div>
         </nav>
 
-        <main class="p-3">
+        <main class="p-3" id="createPost">
+            <form>
+                <div>
+                    <label for="blogTitle" class="form-label">Blog Post Title:</label>
+                    <input type="text" class="form-control mb-3" id="blogTitle" placeholder="Enter blog post title here" name="blogTitle">
+                </div>
+                <div>
+                    <label for="blogPost" class="form-label">Blog Post Content:</label>
+                    <textarea class="form-control mb-3" rows="10" id="blogPost" placeholder="Write blog here" name="blogPost"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
         </main>
 
