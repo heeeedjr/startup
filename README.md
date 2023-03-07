@@ -49,6 +49,9 @@ There are several ways to connect to the webserver we created, I will inlcude th
 ## SSL/TLS Certs
 I did not know you could have a service set up to automatically renew certs. This is something I currently do manually and need to find a way to implement this! The service being used to do this for our implementation is Caddy. It is hooked up to Let's Encrypt. Food for thought...
 
+## JavaScript
+JavaScript is amazing. It has so much power and usefulness. I learned that you can store data in local and session storages and use them for the application, but my favorite thing about JavaScript is its ability to interact with the DOM. It is something I will need to use in my startup application to dynamically load in blog posts from storage.
+
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
 [BootStrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
