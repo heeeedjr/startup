@@ -23,6 +23,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+
+        <!--DOMPurify-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
     </head>
     <body class="bg-light text-dark">
         <header class="container-fluid p-3">
@@ -54,18 +57,25 @@
         </nav>
 
         <main class="p-3" id="createPost">
-            <form>
+            <form onsubmit="createPost(event); clearFormData();">
                 <div>
                     <label for="blogTitle" class="form-label">Blog Post Title:</label>
-                    <input type="text" class="form-control mb-3" id="blogTitle" placeholder="Enter blog post title here" name="blogTitle">
+                    <input type="text" class="form-control mb-3" id="blogTitle" placeholder="Enter blog post title here" name="blogTitle" oninput="storeFormData();" required>
                 </div>
                 <div>
                     <label for="blogPost" class="form-label">Blog Post Content:</label>
-                    <textarea class="form-control mb-3" rows="10" id="blogPost" placeholder="Write blog here" name="blogPost"></textarea>
+                    <textarea class="form-control mb-3" rows="10" id="blogPost" placeholder="Write blog here" name="blogPost" oninput="storeFormData();" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            
 
+            <div id="testCards" class="container-fluid">
+
+            </div>
+            <div id="testPosts">
+                
+            </div>
         </main>
 
         <footer class="bg-dark text-light mt-5">
@@ -74,5 +84,6 @@
               <a class="nav-link" href="https://github.com/heeeedjr/startup">Source</a>
             </div>
         </footer>
+        <script src="JS/createPost.js"></script>
     </body>
 </html>
