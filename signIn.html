@@ -39,11 +39,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="blogPosts.html">Blog Posts</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="about.html">About Me</a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signIn.html">Sign In</a>
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="signIn.html">Sign In</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -60,30 +60,31 @@
                         <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
                             <h3 class="mb-3">Sign in</h3>
-                
-                            <div class="form-outline mb-4">
-                                <input type="email" id="Email" class="form-control form-control-lg" />
-                                <label class="form-label" for="Email">Email</label>
-                            </div>
-                
-                            <div class="form-outline mb-4">
-                                <input type="password" id="Password" class="form-control form-control-lg" />
-                                <label class="form-label" for="Password">Password</label>
-                            </div>
-                
-                            <div class="form-check d-flex justify-content-start mb-5">
-                                <input class="form-check-input" type="checkbox" value="" id="Remember" />
-                                <label class="form-check-label" for="Remember">Remember password</label>
-                            </div>
-                
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-                
-                            <hr class="my-4">
-                
-                            <button class="btn btn-lg btn-block btn-primary mb-3" style="background-color: #dd4b39;"
-                                type="submit">Sign in with Google</button>
-                            <button class="btn btn-lg btn-block btn-primary" style="background-color: #3b5998;"
-                                type="submit">Sign in with facebook</button>
+                            <form id="login-form">
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="Email" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Email">Email</label>
+                                </div>
+                    
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="Password" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Password">Password</label>
+                                </div>
+                    
+                                <div class="form-check d-flex justify-content-start mb-5">
+                                    <input class="form-check-input" type="checkbox" value="" id="Remember" />
+                                    <label class="form-check-label" for="Remember">Remember password</label>
+                                </div>
+                    
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                    
+                                <hr class="my-4">
+                    
+                                <button class="btn btn-lg btn-block btn-primary mb-3" style="background-color: #dd4b39;"
+                                    type="submit">Sign in with Google</button>
+                                <button class="btn btn-lg btn-block btn-primary" style="background-color: #3b5998;"
+                                    type="submit">Sign in with facebook</button>
+                            </form>    
                         </div>
                         </div>
                     </div>
@@ -97,6 +98,8 @@
               <a class="nav-link" href="https://github.com/heeeedjr/startup">Source</a>
             </div>
         </footer>
+
+        <script type="text/javascript" src="JS/login.js"></script>
     </body>
 </html>
 
