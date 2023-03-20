@@ -1,0 +1,21 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "- I learned more about how to resolve merge conflicts. Usually, I do everything through the CLI, which can be a pain, but using the GitLens extension on VSCode made it quite easy to resolve without completely overwriting one of the commits. \r - I learned more about how to use SVGs in the Simon HTML assignment. Here are some of the optionsand what they do: M move <to x,y> Q quadratic curve <control point x,y> <to x,y>\r - I learned how powerful using a framework like Bootstrap really is. I could not have done so much without its help.\r - I learned that you have so much power over what you are doing, but that means you must be super careful otherwise you code things with little security.\r - I learned that CSS is the game changer. It can alter EVERYTHING about the web page (aside from the structure).",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heeeedjr/startup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heeeedjr/startup/issues"
+  },
+  "homepage": "https://github.com/heeeedjr/startup#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2"
+  }
+}
