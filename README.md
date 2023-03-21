@@ -51,7 +51,10 @@ I did not know you could have a service set up to automatically renew certs. Thi
 
 ## JavaScript
 JavaScript is amazing. It has so much power and usefulness. I learned that you can store data in local and session storages and use them for the application, but my favorite thing about JavaScript is its ability to interact with the DOM. It is something I will need to use in my startup application to dynamically load in blog posts from storage.
-I really liked using it for my startup, but its functionality in my blog is minimal. I need to be able to dynamically pull things from a database, and local and session storage is not an actual database. I don't have too many buttons or anything else to add. I could add a lot of API's using JavaScript, but I decided to create a page where I can test what blog posts would look like before actually posting them, a staging area if you will.
+I really liked using it for my startup, but its functionality in my blog is minimal. I need to be able to dynamically pull things from a database, and local and session storage is not an actual database. I don't have too many buttons or anything else to add. I could add a lot of API's using JavaScript, but I decided to create a page where I can test what blog posts would look like before actually posting them, a staging area if you will.  
+
+## Node.js and Express  
+I learned that Node.js is super useful for allowing/creating backend web services. I learned how endpoints allow for different services to work and how HTTP can interact with these services. I learned that you can install many useful premade packages such as Express to do a lot of the heavy lifting while I tweak them into what I want them to be. It is nice to use tools that so many other people use and help improve. It is much better than having to recreate the wheel every time I want to add something to my web application.
 
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
