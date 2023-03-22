@@ -56,6 +56,9 @@ I really liked using it for my startup, but its functionality in my blog is mini
 ## Node.js and Express  
 I learned that Node.js is super useful for allowing/creating backend web services. I learned how endpoints allow for different services to work and how HTTP can interact with these services. I learned that you can install many useful premade packages such as Express to do a lot of the heavy lifting while I tweak them into what I want them to be. It is nice to use tools that so many other people use and help improve. It is much better than having to recreate the wheel every time I want to add something to my web application.
 
+## Databases
+I find it interesting that there are so many different types of databases that offer specific advantages for specific data types and structures. In this portion of the class, I learned how important it is to understand how things connect. Understanding which services need to be reset in order for us to store sensitive information is really important for debugging, otherwise, nothing will work.
+
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
 [BootStrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
