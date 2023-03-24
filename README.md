@@ -59,6 +59,9 @@ I learned that Node.js is super useful for allowing/creating backend web service
 ## Databases
 I find it interesting that there are so many different types of databases that offer specific advantages for specific data types and structures. In this portion of the class, I learned how important it is to understand how things connect. Understanding which services need to be reset in order for us to store sensitive information is really important for debugging, otherwise, nothing will work.
 
+## Login
+I learned that there was a whole lot more going on behind the scenes when it comes to creating users and allowing them access to a web application. I understand how endpoints work, but creating so many and ensuring they are secured, and using so many different services to assist us in doing so got really confusing. It made it seem that it is a miracle that anything stay secure!
+
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
 [BootStrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
