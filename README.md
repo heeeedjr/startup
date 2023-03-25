@@ -60,7 +60,9 @@ I learned that Node.js is super useful for allowing/creating backend web service
 I find it interesting that there are so many different types of databases that offer specific advantages for specific data types and structures. In this portion of the class, I learned how important it is to understand how things connect. Understanding which services need to be reset in order for us to store sensitive information is really important for debugging, otherwise, nothing will work.
 
 ## Login
-I learned that there was a whole lot more going on behind the scenes when it comes to creating users and allowing them access to a web application. I understand how endpoints work, but creating so many and ensuring they are secured, and using so many different services to assist us in doing so got really confusing. It made it seem that it is a miracle that anything stay secure!
+I learned that there was a whole lot more going on behind the scenes when it comes to creating users and allowing them access to a web application. I understand how endpoints work, but creating so many and ensuring they are secured, and using so many different services to assist us in doing so got really confusing. It made it seem that it is a miracle that anything stay secure!  
+
+I also had a lot of problems working with Node.js on windows. It is really a pain trying to use WSL. I gave up on it trying to work and switched to Powershell. It would at least run the npm commands, but it still had lots of problems. I decided to switch to my Linux worksatation as I am more comfortable with it. However, I kept getting an error on it about my MongoDB URI. I researched and it mentioned special characters in the password section, but that wasn't my problem. After some debugging I realized that my environment variables were undefined. I didn't reboot my machine so my changes in my /etc/environment file had not taken place. After the reboot it worked as intended.
 
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
