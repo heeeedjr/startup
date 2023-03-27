@@ -64,6 +64,9 @@ I learned that there was a whole lot more going on behind the scenes when it com
 
 I also had a lot of problems working with Node.js on windows. It is really a pain trying to use WSL. I gave up on it trying to work and switched to Powershell. It would at least run the npm commands, but it still had lots of problems. I decided to switch to my Linux worksatation as I am more comfortable with it. However, I kept getting an error on it about my MongoDB URI. I researched and it mentioned special characters in the password section, but that wasn't my problem. After some debugging I realized that my environment variables were undefined. I didn't reboot my machine so my changes in my /etc/environment file had not taken place. After the reboot it worked as intended.
 
+## WebSockets
+I found it really interesting that there have been many attempts to get around the standard client-server architecture. I wonder if WebSockets are here to stay or if in the future we will find a whole other architecture. Using WebSockets for chat is really cool, I wonder what the other common uses for WebSockets are and how I could potentially add them into my application in the future. 
+
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
 [BootStrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
