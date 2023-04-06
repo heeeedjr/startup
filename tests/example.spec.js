@@ -1,19 +1,17 @@
-// @ts-check
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('testWelcomeButton', async ({ page }) => {
+  // Navigate to the welcome page
+  await page.goto('http://localhost:5500/');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+  // Get the target element and make sure it is in the correct starting state
+  const hello = page.getByTestId('msg');
+  await expect(hello).toHaveText('Hello world');
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  // Press the button
+  const changeBtn = page.getByRole('button', { name: 'change welcome' });
+  await changeBtn.click();
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects the URL to contain intro.
-  await expect(page).toHaveURL(/.*intro/);
+  // Expect that the change happened correctly
+  await expect(hello).toHaveText('I feel not welcomed');
 });
