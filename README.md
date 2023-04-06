@@ -51,7 +51,21 @@ I did not know you could have a service set up to automatically renew certs. Thi
 
 ## JavaScript
 JavaScript is amazing. It has so much power and usefulness. I learned that you can store data in local and session storages and use them for the application, but my favorite thing about JavaScript is its ability to interact with the DOM. It is something I will need to use in my startup application to dynamically load in blog posts from storage.
-I really liked using it for my startup, but its functionality in my blog is minimal. I need to be able to dynamically pull things from a database, and local and session storage is not an actual database. I don't have too many buttons or anything else to add. I could add a lot of API's using JavaScript, but I decided to create a page where I can test what blog posts would look like before actually posting them, a staging area if you will.
+I really liked using it for my startup, but its functionality in my blog is minimal. I need to be able to dynamically pull things from a database, and local and session storage is not an actual database. I don't have too many buttons or anything else to add. I could add a lot of API's using JavaScript, but I decided to create a page where I can test what blog posts would look like before actually posting them, a staging area if you will.  
+
+## Node.js and Express  
+I learned that Node.js is super useful for allowing/creating backend web services. I learned how endpoints allow for different services to work and how HTTP can interact with these services. I learned that you can install many useful premade packages such as Express to do a lot of the heavy lifting while I tweak them into what I want them to be. It is nice to use tools that so many other people use and help improve. It is much better than having to recreate the wheel every time I want to add something to my web application.
+
+## Databases
+I find it interesting that there are so many different types of databases that offer specific advantages for specific data types and structures. In this portion of the class, I learned how important it is to understand how things connect. Understanding which services need to be reset in order for us to store sensitive information is really important for debugging, otherwise, nothing will work.
+
+## Login
+I learned that there was a whole lot more going on behind the scenes when it comes to creating users and allowing them access to a web application. I understand how endpoints work, but creating so many and ensuring they are secured, and using so many different services to assist us in doing so got really confusing. It made it seem that it is a miracle that anything stay secure!  
+
+I also had a lot of problems working with Node.js on windows. It is really a pain trying to use WSL. I gave up on it trying to work and switched to Powershell. It would at least run the npm commands, but it still had lots of problems. I decided to switch to my Linux worksatation as I am more comfortable with it. However, I kept getting an error on it about my MongoDB URI. I researched and it mentioned special characters in the password section, but that wasn't my problem. After some debugging I realized that my environment variables were undefined. I didn't reboot my machine so my changes in my /etc/environment file had not taken place. After the reboot it worked as intended.
+
+## WebSockets
+I found it really interesting that there have been many attempts to get around the standard client-server architecture. I wonder if WebSockets are here to stay or if in the future we will find a whole other architecture. Using WebSockets for chat is really cool, I wonder what the other common uses for WebSockets are and how I could potentially add them into my application in the future. 
 
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
