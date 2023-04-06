@@ -30,12 +30,17 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 #comments {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 3em;
+}
+
+#quote {
+    margin: 3em;
 }
 footer a {
     float: right;

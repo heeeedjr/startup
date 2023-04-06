@@ -9,8 +9,8 @@ function displayQuote(data) {
         const authorEl = document.createElement('p');
         authorEl.classList.add('author');
   
-        quoteEl.textContent = data.content;
-        authorEl.textContent = data.author;
+        quoteEl.textContent = `" ${data.content} "`;
+        authorEl.textContent = `- ${data.author}`;
   
         containerEl.appendChild(quoteEl);
         containerEl.appendChild(authorEl);
