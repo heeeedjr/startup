@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+tests/
+tests-examples/
 node_modules/
 /test-results/
 /playwright-report/
 /playwright/.cache/
-=======
+
 # Dependency directories
 node_modules/
 jspm_packages/
->>>>>>> f025e825b43b8028215f34e2579942967ae645e9
