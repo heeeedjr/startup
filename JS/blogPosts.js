@@ -23,7 +23,10 @@ function displayBlogs(blogs) {
 
     if(blogs.length) {
         // Update DOM with blogs
-        
+
+    } else {
+        blogList.innerHTML = 'No blogs to display';
     }
-    
 }
+
+loadBlogs();
