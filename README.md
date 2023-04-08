@@ -67,6 +67,9 @@ I also had a lot of problems working with Node.js on windows. It is really a pai
 ## WebSockets
 I found it really interesting that there have been many attempts to get around the standard client-server architecture. I wonder if WebSockets are here to stay or if in the future we will find a whole other architecture. Using WebSockets for chat is really cool, I wonder what the other common uses for WebSockets are and how I could potentially add them into my application in the future. 
 
+## Reac
+I learned that react is super powerful and useful for real-world web applications. However, the most imporant thing I learned about this part of the project was being able to debug complex problems and how to work together to do so. Many students were struggling to deploy the code and there were many threads discussing potential solves. After helping others and looking at it our professor recognized the bug and provided a solution. Team work seems to be the most effect way to solve problems and it was a very meaningful thing during this part of the project. 
+
 ## Sources
 [W3 Schools](https://www.w3schools.com/bootstrap5/index.php)  
 [BootStrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
