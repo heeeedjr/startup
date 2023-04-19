@@ -18,14 +18,26 @@ class Comment {
     }
 }
 
+class BlogPost {
+    constructor(date, image, title, text, id, preview) {
+        this.date = date;
+        this.image = image;
+        this.title = title;
+        this.text = text;
+        this.id = id;
+        this.preview = preview;
+    }
+}
 
 
 async function loadBlog() {
+    const blogPost = new BlogPost();
+
     try {
         // Get blogs from service which gets it from database
         const id = window.location.search.split('=')[1];
-        const response = await fetch('/api/blogs/' + id);
-        const blogPost = await response.json();
+        const response = await fetch(`/api/blogs/${id}`);
+        blogPost = await response.json();
 
         // Save blogs to local storage
         localStorage.setItem('blogPost', JSON.stringify(blogPost));
@@ -36,7 +48,6 @@ async function loadBlog() {
             blogPost = JSON.parse(blogText);
         }
     }
-
     displayBlog(blogPost);
 }
 

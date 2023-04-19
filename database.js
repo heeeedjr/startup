@@ -38,13 +38,13 @@ function getUser(email) {
   }
 
 // Add blog post
-function addBlogPost(date, image, title, text, id) {
-  blogsCollection.insert({ date: date, image: image, title: title, text: text, id: id});
+function addBlogPost(date, image, title, text, id, preview) {
+  blogsCollection.insertOne({ date: date, image: image, title: title, text: text, id: id, preview: preview});
 }
 
 // Get blog post
 function getBlogPost(id) {
-  return blogsCollection.findOne({ id: id });
+  return blogsCollection.findOne({ _id: id });
 }
 
 // Get all blog posts
@@ -54,12 +54,12 @@ function getAllBlogPosts() {
 
 // Delete blog post
 function deleteBlogPost(id) {
-  blogsCollection.delete({ id: id });
+  blogsCollection.delete({ _id: id });
 }
 
 // Update blog post
-function updateBlogPost(date, image, title, text, id) {
-  blogsCollection.update({ id: id }, { date: date, image: image, title: title, text: text });
+function updateBlogPost(date, image, title, text, id, preview) {
+  blogsCollection.updateOne({ _id: id }, { date: date, image: image, title: title, text: text, preview: preview});
 }
 
 module.exports = {

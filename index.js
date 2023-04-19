@@ -86,7 +86,7 @@ apiRouter.post('/auth/create', async (req, res) => {
 // API Endpoints
 // Add blog post
 secureApiRouter.post('/blogs', async (req, res) => {
-  const blog = await DB.addBlogPost(req.body.date, req.body.image, req.body.title, req.body.text, req.body.id);
+  const blog = await DB.addBlogPost(req.body.date, req.body.image, req.body.title, req.body.text, req.body.id, req.body.preview);
   res.send(blog);
 });
 
@@ -110,7 +110,7 @@ secureApiRouter.delete('/blogs/:id', async (req, res) => {
 
 // Update blog post
 secureApiRouter.put('/blogs/:id', async (req, res) => {
-  const blog = await DB.updateBlogPost(req.params.id, req.body.date, req.body.image, req.body.title, req.body.text, req.body.id);
+  const blog = await DB.updateBlogPost(req.params.id, req.body.date, req.body.image, req.body.title, req.body.text, req.body.id, req.body.preview);
   res.send(blog);
 });
 
