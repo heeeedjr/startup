@@ -7,8 +7,11 @@ async function createPost(event) {
     let cleanText= formEntry.get('blogPost');
     cleanText = DOMPurify.sanitize(cleanText);
 
+    let cleanPreview = formEntry.get('blogPreview');
+    cleanPreview = DOMPurify.sanitize(cleanPreview);
 
-    const newPost = { date: getDate(), image: 'router.jpg', title: cleanTitle, text: cleanText, id: Date.now() };
+
+    const newPost = { date: getDate(), image: 'router.jpg', title: cleanTitle, text: cleanText, id: Date.now(), preview: cleanPreview };
     try {
         const response = await fetch('/api/blogs', {
             method: 'POST',

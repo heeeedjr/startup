@@ -93,7 +93,11 @@ secureApiRouter.post('/blogs', async (req, res) => {
 // Get blog post
 secureApiRouter.get('/blogs/:id', async (req, res) => {
   const blog = await DB.getBlogPost(req.params.id);
-  res.send(blog);
+  if (blog) {
+    res.send(blog);
+  } else {
+    res.status(404).send({ msg: 'Blog Not Found' });
+  }
 });
 
 // Get all blog posts

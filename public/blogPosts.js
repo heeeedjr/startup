@@ -50,7 +50,7 @@ function displayBlogs(blogs) {
             // Create text element for card body
             const textElement = document.createElement('p');
             textElement.classList.add('card-text');
-            textElement.innerText = blog.text;
+            textElement.innerText = blog.preview;
 
             // Create link element for card body
             const linkElement = document.createElement('a');

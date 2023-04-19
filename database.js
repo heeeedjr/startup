@@ -44,6 +44,7 @@ function addBlogPost(date, image, title, text, id, preview) {
 
 // Get blog post
 function getBlogPost(id) {
+  console.log(id);
   return blogsCollection.findOne({ _id: id });
 }
 
@@ -54,12 +55,12 @@ function getAllBlogPosts() {
 
 // Delete blog post
 function deleteBlogPost(id) {
-  blogsCollection.delete({ _id: id });
+  blogsCollection.delete({ id: id });
 }
 
 // Update blog post
 function updateBlogPost(date, image, title, text, id, preview) {
-  blogsCollection.updateOne({ _id: id }, { date: date, image: image, title: title, text: text, preview: preview});
+  blogsCollection.updateOne({ id: id }, { date: date, image: image, title: title, text: text, preview: preview});
 }
 
 module.exports = {

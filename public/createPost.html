@@ -67,11 +67,15 @@
                     <input type="text" class="form-control mb-3" id="blogTitle" placeholder="Enter blog post title here" name="blogTitle" oninput="storeFormData();" required>
                 </div>
                 <div>
+                    <label for="blogPreview" class="form-label">Blog Post Preview:</label>
+                    <input type="text" class="form-control mb-3" id="blogPreview" placeholder="Enter blog post preview here" name="blogPreview" oninput="storeFormData();" required>
+                </div>
+                <div>
                     <label for="blogPost" class="form-label">Blog Post Content:</label>
                     <textarea class="form-control mb-3" rows="10" id="blogPost" placeholder="Write blog here" name="blogPost" oninput="storeFormData();" required></textarea>
                 </div>
                 <div>
-                    <label for="blogImage" class="form-label">Author Name:</label>
+                    <label for="blogImage" class="form-label">File Name:</label>
                     <input type="text" class="form-control mb-3" id="blogImage" placeholder="Enter image file name here" name="blogImage" oninput="storeFormData();" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
