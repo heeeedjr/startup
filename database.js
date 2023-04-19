@@ -59,7 +59,7 @@ function getBlogComments(id) {
 }
 
 // Add a comment
-function addComment(blogId, name, text) {
+function addBlogComment(blogId, name, text) {
   commentsCollection.insertOne({ blogId: blogId, name: name, text: text, date: date });
 }
 
@@ -81,7 +81,7 @@ module.exports = {
     getBlogPost,
     getAllBlogPosts,
     getBlogComments,
-    addComment,
+    addBlogComment,
     deleteBlogPost,
     updateBlogPost,
   };

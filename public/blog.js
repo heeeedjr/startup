@@ -99,22 +99,22 @@ async function loadComments() {
         comments = await response.json();
 
         // Save blogs to local storage
-        localStorage.setItem('comments', JSON.stringify(blogPost));
+        localStorage.setItem('comments', JSON.stringify(comments));
     } catch {
         // If we can't get blogs from service, get them from local storage
         const commentSection = localStorage.getItem('comments');
         if (commentSection) {
-            comments = JSON.parse(blogText);
+            comments = JSON.parse(commentSection);
         }
     }
     displayComments(comments);
 }
 
 function displayComments(comments) {
-    // Get element to display blog
+    // Get element to display comments
     const theCommentSection = document.querySelector('#comments');
 
-    if (comments.length) {
+    if (comments) {
         for (const [i, comment] of comments.entries()) {
             // Update DOM with comments
             // Create elements to display comments
@@ -148,9 +148,13 @@ function displayComments(comments) {
             commentCardBody.appendChild(commentCardFooter);            
         }
     } else {
-        theCommentSection.innerText = "Be the first to comment!";
+        const noComments = document.createElement('p');
+        noComments.innerText = "Be the first to comment!";
+        theCommentSection.appendChild(noComments);
      }
+}
 
+loadComments();
 
 function getDate() {
     let today = new Date()

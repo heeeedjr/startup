@@ -119,7 +119,7 @@
               </div> -->
             </div>
 
-            <form id="addComment" onsubmit="" style="width: 60%;">
+            <div id="addComment" onsubmit="" style="width: 60%;">
                 <div class="form-group">
                     <label for="commentName" class="form-label">Name:</label>
                     <input type="text" class="form-control mb-3" id="commentName" placeholder="Enter your name here" name="commentName" required>
@@ -128,8 +128,8 @@
                     <label for="commentText" class="form-label">Comment:</label>
                     <textarea class="form-control mb-3" rows="5" id="commentText" placeholder="Write comment here" name="commentText" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+                <button type="submit" class="btn btn-primary" onclick="loadComments(); displayComments();">Submit</button>
+            </div>
 
         </main>
 
