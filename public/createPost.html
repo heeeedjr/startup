@@ -42,11 +42,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="blogPosts.html">Blog Posts</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="about.html">About Me</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="signIn.html">Sign In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="createPost.html">Create Post</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -57,6 +60,7 @@
         </nav>
 
         <main class="p-3" id="createPost">
+            <div id="player-messages"></div>
             <form onsubmit="createPost(event); clearFormData();">
                 <div>
                     <label for="blogTitle" class="form-label">Blog Post Title:</label>
@@ -65,6 +69,10 @@
                 <div>
                     <label for="blogPost" class="form-label">Blog Post Content:</label>
                     <textarea class="form-control mb-3" rows="10" id="blogPost" placeholder="Write blog here" name="blogPost" oninput="storeFormData();" required></textarea>
+                </div>
+                <div>
+                    <label for="blogImage" class="form-label">Author Name:</label>
+                    <input type="text" class="form-control mb-3" id="blogImage" placeholder="Enter image file name here" name="blogImage" oninput="storeFormData();" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -81,6 +89,6 @@
               <a class="nav-link" href="https://github.com/heeeedjr/startup">Source</a>
             </div>
         </footer>
-        <script src="../JS/createPost.js"></script>
+        <script src="JS/createPost.js"></script>
     </body>
 </html>
