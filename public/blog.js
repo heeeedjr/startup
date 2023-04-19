@@ -114,7 +114,7 @@ function displayComments(comments) {
     // Get element to display comments
     const theCommentSection = document.querySelector('#comments');
 
-    if (comments) {
+    if (comments.length) {
         for (const [i, comment] of comments.entries()) {
             // Update DOM with comments
             // Create elements to display comments
@@ -155,6 +155,39 @@ function displayComments(comments) {
 }
 
 loadComments();
+
+
+
+async function createComment(event) {
+    event.preventDefault();
+    
+    let formEntry = new FormData(event.currentTarget);
+
+    let cleanTitle = formEntry.get('commentName');
+    cleanTitle = DOMPurify.sanitize(cleanTitle);
+
+    let cleanText= formEntry.get('commentText');
+    cleanText = DOMPurify.sanitize(cleanText);
+
+
+    const newComment = { blogId: window.location.search.split('=')[1], name: cleanTitle, text: cleanText, date: getDate() };
+    try {
+        const response = await fetch('/api/blogs/:id/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newComment)
+        });
+        const result = await response.json();
+        console.log(result);
+    } catch {
+        console.log('error creating comment');
+    }
+}
+
+
+
 
 function getDate() {
     let today = new Date()
