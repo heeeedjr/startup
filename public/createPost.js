@@ -73,22 +73,29 @@ function updateStorage(myPost) {
 }
 
 function storeFormData() {
-    let blogTitle = document.getElementById('blogTitle').value;
-    localStorage.setItem('blogTitle', DOMPurify.sanitize(blogTitle));
-    let blogPost = document.getElementById('blogPost').value;
-    localStorage.setItem('blogPost', DOMPurify.sanitize(blogPost));
+    let blogTitle = document.getElementById('theblogTitle').value;
+    localStorage.setItem('theblogTitle', DOMPurify.sanitize(blogTitle));
+    let blogPost = document.getElementById('theblogPost').value;
+    localStorage.setItem('theblogPost', DOMPurify.sanitize(blogPost));
+    let blogPreview = document.getElementById('theblogPreview').value;
+    localStorage.setItem('theblogPreview', DOMPurify.sanitize(blogPreview));
 }
 
 function reloadFormData() {
-    let blogTitle = localStorage.getItem('blogTitle')
+    let blogTitle = localStorage.getItem('theblogTitle')
     if (blogTitle !== null)
     {
-        document.getElementById('blogTitle').value = blogTitle
+        document.getElementById('theblogTitle').value = blogTitle
     }
-    let blogPost = localStorage.getItem('blogPost');
+    let blogPost = localStorage.getItem('theblogPost');
     if (blogPost !== null)
     {
-        document.getElementById('blogPost').value = blogPost;
+        document.getElementById('the blogPost').value = blogPost;
+    }
+    let blogPreview = localStorage.getItem('theblogPreview');
+    if (blogPreview !== null)
+    {
+        document.getElementById('theblogPreview').value = blogPreview;
     }
 }
 window.addEventListener('load', reloadFormData)
@@ -96,8 +103,10 @@ window.addEventListener('load', reloadFormData)
 function clearFormData() {
     localStorage.removeItem('blogTitle');
     localStorage.removeItem('blogPost');
+    localStorage.removeItem('blogPreview');
     document.getElementById('blogTitle').value = '';
     document.getElementById('blogPost').value = '';
+    document.getElementById('blogPreview').value = '';
 }
 
 function getDate() {
@@ -109,7 +118,7 @@ function getDate() {
     if (dd < 10) { dd = '0' + dd } 
     if (mm < 10) { mm = '0' + mm } 
     
-    let theDate = yyyy + '-' + mm + '-' + dd
+    let theDate = mm + '/' + dd + '/' + yyyy
     return theDate;
 }
 window.addEventListener('load', getDate)

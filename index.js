@@ -92,7 +92,9 @@ secureApiRouter.post('/blogs', async (req, res) => {
 
 // Get blog post
 secureApiRouter.get('/blogs/:id', async (req, res) => {
-  const blog = await DB.getBlogPost(req.params.id);
+  const id = parseInt(req.params.id);
+
+  const blog = await DB.getBlogPost(id);
   if (blog) {
     res.send(blog);
   } else {
@@ -101,20 +103,24 @@ secureApiRouter.get('/blogs/:id', async (req, res) => {
 });
 
 // Get all blog posts
-secureApiRouter.get('/blogs', async (_req, res) => {
+secureApiRouter.get('/blogs', async (req, res) => {
   const blogs = await DB.getAllBlogPosts();
   res.send(blogs);
 });
 
 // Delete blog post
 secureApiRouter.delete('/blogs/:id', async (req, res) => {
-  const blog = await DB.deleteBlogPost(req.params.id);
+  const id = parseInt(req.params.id);
+
+  const blog = await DB.deleteBlogPost(id);
   res.send(blog);
 });
 
 // Update blog post
 secureApiRouter.put('/blogs/:id', async (req, res) => {
-  const blog = await DB.updateBlogPost(req.params.id, req.body.date, req.body.image, req.body.title, req.body.text, req.body.id, req.body.preview);
+  const id = parseInt(req.params.id);
+
+  const blog = await DB.updateBlogPost(id, req.body.date, req.body.image, req.body.title, req.body.text, req.body.id, req.body.preview);
   res.send(blog);
 });
 

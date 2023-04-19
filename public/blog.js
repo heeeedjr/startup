@@ -31,8 +31,7 @@ class BlogPost {
 
 
 async function loadBlog() {
-    const blogPost = new BlogPost();
-
+    let blogPost;
     try {
         // Get blogs from service which gets it from database
         const id = window.location.search.split('=')[1];

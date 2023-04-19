@@ -42,10 +42,9 @@ function addBlogPost(date, image, title, text, id, preview) {
   blogsCollection.insertOne({ date: date, image: image, title: title, text: text, id: id, preview: preview});
 }
 
-// Get blog post
+// Get one blog post
 function getBlogPost(id) {
-  console.log(id);
-  return blogsCollection.findOne({ _id: id });
+  return blogsCollection.findOne(({ id: id}));
 }
 
 // Get all blog posts
