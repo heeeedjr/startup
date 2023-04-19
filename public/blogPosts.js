@@ -19,7 +19,7 @@ async function loadBlogs() {
 
 function displayBlogs(blogs) {
     // Get element to display blogs
-    const blogList = document.querySelector('#blogs');
+    const blogList = document.getElementById('blogs');
 
     if(blogs.length) {
         // Update DOM with blogs
