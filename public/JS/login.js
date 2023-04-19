@@ -39,7 +39,7 @@ async function loginOrCreate(endpoint) {
 
   if (response?.status === 200) {
     localStorage.setItem('userName', userName);
-    window.location.href = 'play.html';
+    window.location.href = 'index.html';
   } else {
     const modalEl = document.querySelector('#msgModal');
     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
@@ -48,8 +48,8 @@ async function loginOrCreate(endpoint) {
   }
 }
 
-function play() {
-  window.location.href = 'play.html';
+function index() {
+  window.location.href = 'index.html';
 }
 
 function logout() {
@@ -59,7 +59,6 @@ function logout() {
 }
 
 async function getUser(email) {
-  let scores = [];
   // See if we have a user with the given email.
   const response = await fetch(`/api/user/${email}`);
   if (response.status === 200) {
