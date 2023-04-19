@@ -1,20 +1,9 @@
 class Comment {
-    constructor(name, comment, date, id, blogId) {
+    constructor(name, text, blogId) {
         this.name = name;
-        this.comment = comment;
-        this.date = date;
-        this.id = id;
+        this.comment = text;
+        this.date = getDate();
         this.blogId = blogId;
-    }
-    prettyDate() {
-        let regex = /([0-9]{4})-([0-9]{2})-([0-9]{2})/
-        let matches = regex.exec(this.date)
-
-        let year = matches[1]
-        let month = matches[2]
-        let day = matches[3]
-
-        return `${month}/${day}/${year}`
     }
 }
 
@@ -101,6 +90,66 @@ function displayBlog(blogPost) {
 
 loadBlog();
 
+async function loadComments() {
+    let comments = [];
+    try {
+        // Get blogs from service which gets it from database
+        const id = window.location.search.split('=')[1];
+        const response = await fetch(`/api/blogs/${id}/comments`);
+        comments = await response.json();
+
+        // Save blogs to local storage
+        localStorage.setItem('comments', JSON.stringify(blogPost));
+    } catch {
+        // If we can't get blogs from service, get them from local storage
+        const commentSection = localStorage.getItem('comments');
+        if (commentSection) {
+            comments = JSON.parse(blogText);
+        }
+    }
+    displayComments(comments);
+}
+
+function displayComments(comments) {
+    // Get element to display blog
+    const theCommentSection = document.querySelector('#comments');
+
+    if (comments.length) {
+        for (const [i, comment] of comments.entries()) {
+            // Update DOM with comments
+            // Create elements to display comments
+            const commentElement = document.createElement('div');
+            commentElement.classList.add('card');
+            commentElement.style.width = '60%';
+
+            // Create card body element for comment
+            const commentCardBody = document.createElement('div');
+            commentCardBody.classList.add('card-body');
+
+            // Create card title element for comment
+            const commentCardTitle = document.createElement('h5');
+            commentCardTitle.classList.add('card-title');
+            commentCardTitle.innerText = comment.name;
+
+            // Create card text element for comment
+            const commentCardText = document.createElement('p');
+            commentCardText.classList.add('card-text');
+            commentCardText.innerText = comment.text;
+
+            // Create card footer element for comment
+            const commentCardFooter = document.createElement('small');
+            commentCardFooter.classList.add('text-muted');
+            commentCardFooter.innerText = comment.date;
+
+            theCommentSection.appendChild(commentElement);
+            commentElement.appendChild(commentCardBody);
+            commentCardBody.appendChild(commentCardTitle);
+            commentCardBody.appendChild(commentCardText);
+            commentCardBody.appendChild(commentCardFooter);            
+        }
+    } else {
+        theCommentSection.innerText = "Be the first to comment!";
+     }
 
 
 function getDate() {

@@ -102,6 +102,22 @@ secureApiRouter.get('/blogs/:id', async (req, res) => {
   }
 });
 
+// Get a blog's comments
+secureApiRouter.get('/blogs/:id/comments', async (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const comments = await DB.getBlogComments(id);
+  res.send(comments);
+});
+
+// Add a comment to a blog
+secureApiRouter.post('/blogs/:id/comments', async (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const comment = await DB.addBlogComment(id, req.body.name, req.body.text, req.body.date);
+  res.send(comment);
+});
+
 // Get all blog posts
 secureApiRouter.get('/blogs', async (req, res) => {
   const blogs = await DB.getAllBlogPosts();

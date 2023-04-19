@@ -15,6 +15,7 @@ const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 const client = new MongoClient(url);
 const blogsCollection = client.db('cs260').collection('blogPosts');
 const usersCollection = client.db('cs260').collection('users');
+const commentsCollection = client.db('cs260').collection('comments');
 
 function getUser(email) {
     return usersCollection.findOne({ email: email });
@@ -52,6 +53,16 @@ function getAllBlogPosts() {
   return blogsCollection.find({}).toArray();
 }
 
+// Get a blog's comments
+function getBlogComments(id) {
+  return commentsCollection.find({ blogId: id }).toArray();
+}
+
+// Add a comment
+function addComment(blogId, name, text) {
+  commentsCollection.insertOne({ blogId: blogId, name: name, text: text, date: date });
+}
+
 // Delete blog post
 function deleteBlogPost(id) {
   blogsCollection.delete({ id: id });
@@ -69,6 +80,8 @@ module.exports = {
     addBlogPost,
     getBlogPost,
     getAllBlogPosts,
+    getBlogComments,
+    addComment,
     deleteBlogPost,
     updateBlogPost,
   };
